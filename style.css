@@ -1,0 +1,13 @@
+.active{
+    background-color: black !important;
+}
+footer {
+    height: 70px;
+  }
+  .card:hover {
+    transform: scale(1.1);
+    
+  }
+  form{
+    background-color:darkgray
+  }
