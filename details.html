@@ -20,7 +20,7 @@
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
-    <title>Past Events</title>
+    <title>Details</title>
   </head>
 
   <body class="container-fluid px-0 d-flex flex-column">
@@ -37,9 +37,9 @@
           <a class="nav-link text-dark" href="./upEvents.html"
             >Upcoming Events</a
           >
-          <a class="nav-link active" href="#">Past Events</a>
+          <a class="nav-link text-dark" href="./pastEvents.html">Past Events</a>
           <a class="nav-link text-dark" href="./contact.html">Contact</a>
-          <a class="nav-link text-dark" href="./stats.html">Stats</a>
+          <a class="nav-link text-dark" href="#">Stats</a>
         </nav>
       </div>
     </header>
@@ -49,76 +49,26 @@
         class="d-flex bg-dark-subtle justify-content-between align-items-center px-3"
       >
         <i class="bi bi-caret-left fs-1"></i>
-        <h1 class="d-inline-flex align-items-center">Past Events</h1>
+        <h1 class="d-inline-flex align-items-center">Details</h1>
         <i class="bi bi-caret-right fs-1"></i>
       </section>
-      <section
-        class="search-area d-flex flex-column flex-lg-row justify-content-around pt-3 align-items-center pb-4 border-bottom"
-      >
-        <div class="d-flex justify-content-around col-12 col-lg-6 mb-3 mb-lg-0">
-          <div>
-            <input
-              class="form-check-input"
-              type="checkbox"
-              name="category1"
-              id="category1"
-            />
-            <label for="category1">Category</label>
-          </div>
-          <div>
-            <input
-              class="form-check-input"
-              type="checkbox"
-              name="category2"
-              id="category2"
-            />
-            <label for="category2">Category</label>
-          </div>
-          <div>
-            <input
-              class="form-check-input"
-              type="checkbox"
-              name="category3"
-              id="category3"
-            />
-            <label for="category3">Category</label>
-          </div>
-          <div>
-            <input
-              class="form-check-input"
-              type="checkbox"
-              name="category4"
-              id="category4"
-            />
-            <label for="category4">Category</label>
-          </div>
-          <div>
-            <input
-              class="form-check-input"
-              type="checkbox"
-              name="category"
-              id="category"
-            />
-            <label for="category">Category</label>
-          </div>
+      <div class="d-flex  card col-10 col-md-8 p-0 details my-5 mb-3">
+        <div class="d-flex h-100 flex-md-row flex-column">
+            <div class="col d-flex justify-content-center">
+                <img id="detail-img" src="./assets/imagenes/Music_Concert.jpg" class="img-fluid w-100 rounded-start" alt="...">
+            </div>
+            <div class="d-flex col align-items-center">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                        additional content. This content is a little bit longer.</p>
+                </div>
+            </div>
         </div>
+    </div>
+      
 
-        <div class="d-inline-flex col-8 col-lg-4">
-          <input type="text" class="form-control border-dark" />
-          <button
-            class="ms-2 btn btn-dark"
-            type="button"
-            name="search"
-          >
-            <i class="bi bi-search"></i>
-          </button>
-        </div>
-      </section>
-      <div id="tarjetas"
-        class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-4 g-4 mt-5 mx-3 text-center"
-      >
-        
-      </div>
+      
     </main>
     <footer class="d-flex bg-dark mt-5 text-white align-items-center">
       <div>
@@ -132,6 +82,6 @@
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
-    <script src="./pastEvents.js"></script>
+    <script src="./main.js"></script>
   </body>
 </html>
