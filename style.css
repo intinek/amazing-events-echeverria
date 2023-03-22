@@ -4,9 +4,23 @@
 footer {
   height: 70px;
 }
+#contenedor img {
+  object-fit: cover;
+  height: 200px;
+  }
 .card:hover {
   transform: scale(1.1);
 }
 form {
   background-color: darkgray;
 }
+.table {
+  text-align: center;
+}
+th,
+td {
+    width: 15%;
+    border: solid black 2px;
+    font-size: 1.2rem;
+}
+

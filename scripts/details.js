@@ -454,41 +454,27 @@ const id = params.get("id")
 const eventFound = data.events.find(event => event._id == id)
 
 const div = document.querySelector("#contenedor")
-div.innerHTML =  `<div class="d-flex h-100 flex-md-row flex-column">
-<div class="col d-flex justify-content-center">
-    <img id="detail-img" src="${eventDetail.image}" class="img-fluid w-100 rounded-start" alt="...">
-</div>
-<div class="d-flex col align-items-center">
-    <div class="card-body">
-        <h5 class="card-title">${eventDetail.name}</h5>
-        <p class="card-text">${eventDetail.description}</p>
-        <div class="d-flex flex-wrap flex-column flex-sm-row border-top border-1 border-secondary">
-            <div class="d-flex text-center align-items-center justify-content-center card-text col-sm-6 col-12">
-                <i class="bi bi-person-square text-danger fs-1 pe-2"></i>
-                <span class="col-7">Capacity: ${eventDetail.capacity}</span>
-            </div>
-            <div class="d-flex text-center align-items-center justify-content-center card-text col-sm-6 col-12">
-                <i class="bi bi-currency-dollar text-danger fs-1 pe-2"></i>
-                <span class="col-7">Price: ${eventDetail.price}</span>
-            </div>
-            <div class="d-flex text-center align-items-center justify-content-center card-text col-sm-6 col-12">
-                <i class="bi bi-bookmark-fill text-danger fs-1 pe-2"></i>
-                <span class="col-7">Category: ${eventDetail.category}</span>
-            </div>
-            <div class="d-flex text-center align-items-center justify-content-center card-text col-sm-6 col-12">
-                <i class="bi bi-geo-alt-fill text-danger fs-1 pe-2"></i>
-                <span class="col-7">Place: ${eventDetail.place}</span>
-            </div>
-            <div class="d-flex text-center align-items-center justify-content-center card-text col-sm-6 col-12">
-                <i class="bi bi-calendar-event text-danger fs-1 pe-2"></i>
-                <span class="col-7">Date: ${eventDetail.date}</span>
-            </div>
-            <div class="d-flex text-center align-items-center justify-content-center card-text col-sm-6 col-12">
-                <i class="bi bi-person-fill-up text-danger fs-1 pe-2"></i>
-                <span class="col-7"> ${(eventDetail.assistance!=undefined) ? ("Assistance: "): ("Estimate: ")}  ${(eventDetail.assistance!=undefined) ? (eventDetail.assistance): (eventDetail.estimate)}</span>
-            </div>
+div.innerHTML = ` 
+<div class="col" id="event-${eventFound._id}">
+<div class="card shadow p-3 mb-5 bg-body-tertiary rounded">
+<img src="${eventFound.image}" class="card-img-top" alt="card">
+<div class="card-body">
+  <h4 class="card-title">${eventFound.name}</h4>
+    <p class="card-text">${eventFound.description}</p>
+  <h6 class ="card-category">Category: ${eventFound.category}</h6>
+  <h6 class ="card-category">Capacity: ${eventFound.capacity}</h6>
+  <h6 class ="card-category">Date: ${eventFound.date}</h46>
+  <h6 class ="card-category">Place: ${eventFound.place}</h6>
+  <h6 class ="card-category">Assistance: ${eventFound.assistance}</h6>
+  <h6 class ="card-category">Estimate: ${eventFound.estimate}</h6>
+  </div>
 
+  <div class="card-footer d-inline-flex justify-content-around">
+                        <div class="d-flex align-items-center">
+                        <h5>Price: ${eventFound.price}$</h5>
+                        </div>
+                        <a class="btn btn-dark" href="#">Buy Ticket</a>
+            </div>
         </div>
     </div>
-</div>
-</div>`
+`;
